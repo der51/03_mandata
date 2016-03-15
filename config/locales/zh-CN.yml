@@ -387,6 +387,7 @@ zh-CN:
         id_no_img: "身份证扫描件"
         avatar: 照片
         realname: "姓名"
+        nickname: "曾用名"
         email: "邮箱"
         id_no: "身份证号"
         sex: "性别"

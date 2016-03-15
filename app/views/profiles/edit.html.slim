@@ -12,6 +12,13 @@ p.main_title 基本信息
         - if @profile.errors.include?(:realname)
             span class="help-block" #{@profile.errors.get(:realname)[-1]}
 
+      label.col-xs-2.control-label class=('label-error' if @profile.errors.include?(:nickname))
+         = Profile.human_attribute_name("nickname")
+      div.col-xs-2 class=('has-error' if @profile.errors.include?(:nickname))
+        = f.input_field :nickname, class: "form-control"
+        - if @profile.errors.include?(:nickname)
+            span class="help-block" #{@profile.errors.get(:nickname)[-1]}
+
       label.col-xs-offset-2.col-xs-1.control-label class=('label-error' if @profile.errors.include?(:avatar))
         = Profile.human_attribute_name("avatar")
       div.col-xs-3

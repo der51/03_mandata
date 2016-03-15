@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151125025739) do
+ActiveRecord::Schema.define(version: 20160304085034) do
 
   create_table "archives", force: :cascade do |t|
     t.integer  "user_id",    limit: 4
@@ -210,6 +210,7 @@ ActiveRecord::Schema.define(version: 20151125025739) do
     t.datetime "updated_at",                               null: false
     t.string   "avatar",       limit: 255
     t.string   "id_no_img",    limit: 255
+    t.string   "nickname",     limit: 255
   end
 
   add_index "profiles", ["id_no"], name: "index_profiles_on_id_no", using: :btree
